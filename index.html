@@ -16,30 +16,32 @@
 ===================================================== -->
 
 
-<!-- اسم الدعوة الذي سيظهر في معاينة الرابط -->
+<!-- اسم الدعوة في المتصفح -->
 
 <title>Shady & Aya Wedding Invitation</title>
 
 
+<!-- وصف الموقع -->
+
 <meta
   name="description"
-  content="ننتظر حضوركم "
+  content="You're invited to celebrate with us"
 >
 
 
-<!-- اسم الدعوة -->
+<!-- اسم الدعوة في واتساب / السوشيال ميديا -->
 
 <meta
   property="og:title"
-  content="حفل زفاف شادي & ايه"
+  content="Shady & Aya Wedding Invitation"
 >
 
 
-<!-- الوصف -->
+<!-- الوصف في واتساب / السوشيال ميديا -->
 
 <meta
   property="og:description"
-  content="ننتظر حضوركم"
+  content="You're invited to celebrate with us"
 >
 
 
@@ -47,13 +49,13 @@
 
 <meta
   property="og:image"
-  content="https://ssssss.tdesignation.online/media/preview.jpg"
+  content="https://ssssss.tdesignation.online/preview.jpg"
 >
 
 
 <meta
   property="og:image:secure_url"
-  content="https://ssssss.tdesignation.online/media/preview.jpg"
+  content="https://ssssss.tdesignation.online/preview.jpg"
 >
 
 
@@ -81,11 +83,11 @@
 >
 
 
-<!-- رابط دعوة العميل -->
+<!-- رابط الدعوة -->
 
 <meta
   property="og:url"
-  content="https://mostafa-sara.tdesignation.online/"
+  content="https://ssssss.tdesignation.online/"
 >
 
 
@@ -99,7 +101,7 @@
 
 <meta
   name="twitter:title"
-  content="Mostafa & Sara Wedding Invitation"
+  content="Shady & Aya Wedding Invitation"
 >
 
 
@@ -111,7 +113,7 @@
 
 <meta
   name="twitter:image"
-  content="https://ssssss.tdesignation.online/media/preview.jpg"
+  content="https://ssssss.tdesignation.online/preview.jpg"
 >
 
 
@@ -193,7 +195,6 @@ body {
 
   cursor: pointer;
 
-
   transition:
     opacity 0.8s ease,
     visibility 0.8s ease;
@@ -208,11 +209,9 @@ body {
 
   inset: 0;
 
-
   width: 100%;
 
   height: 100%;
-
 
   object-fit: cover;
 
@@ -232,44 +231,34 @@ body {
 
   position: absolute;
 
-
   left: 50%;
 
   bottom: 20%;
 
-
   transform:
     translateX(-50%);
 
-
   z-index: 10;
-
 
   padding:
     12px 26px;
 
-
   border-radius:
     50px;
 
-
   white-space:
     nowrap;
-
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-
   font-weight:
     400;
 
-
   cursor:
     pointer;
-
 
   transition:
     opacity .4s ease,
@@ -283,11 +272,9 @@ body {
 
   opacity: 0;
 
-
   transform:
     translateX(-50%)
     translateY(10px);
-
 
   pointer-events:
     none;
@@ -414,8 +401,6 @@ body {
 
         ⭐ بيانات العميل — عدّل هنا فقط ⭐
 
-   لا تعدّل أي شيء أسفل CLIENT
-
 ========================================================= */
 
 
@@ -426,7 +411,6 @@ const CLIENT = {
      1. رابط دعوة CANVA
   ========================================= */
 
-
   canvaUrl:
 
   "https://www.canva.com/design/DAHV7WH2k6A/z9q1mYvSLrvWY2_hx_AcrQ/view?embed",
@@ -435,30 +419,31 @@ const CLIENT = {
 
   /* =========================================
      2. فيديو الافتتاحية
-  ========================================= */
 
+     لا تغير الاسم إذا كان الملف اسمه intro.mp4
+  ========================================= */
 
   introVideo:
 
-  "media/intro.mp4",
+  "intro.mp4",
 
 
 
   /* =========================================
      3. الأغنية
-  ========================================= */
 
+     لا تغير الاسم إذا كان الملف اسمه music.mp3
+  ========================================= */
 
   music:
 
-  "media/music.mp3",
+  "music.mp3",
 
 
 
   /* =========================================
      4. الكلام الموجود على الافتتاحية
   ========================================= */
-
 
   openText:
 
@@ -468,12 +453,7 @@ const CLIENT = {
 
   /* =========================================
      5. لون الكلام
-
-     أبيض = #FFFFFF
-     أسود = #000000
-     ذهبي = #D4AF37
   ========================================= */
-
 
   textColor:
 
@@ -485,7 +465,6 @@ const CLIENT = {
      6. حجم الكلام
   ========================================= */
 
-
   fontSize:
 
   "15px",
@@ -494,12 +473,7 @@ const CLIENT = {
 
   /* =========================================
      7. سمك الخط
-
-     400 = عادي
-     600 = متوسط
-     700 = عريض
   ========================================= */
-
 
   fontWeight:
 
@@ -511,7 +485,6 @@ const CLIENT = {
      8. المسافة بين الحروف
   ========================================= */
 
-
   letterSpacing:
 
   "2px",
@@ -520,12 +493,7 @@ const CLIENT = {
 
   /* =========================================
      9. مكان الكلام من أسفل الشاشة
-
-     8%  = قريب من الأسفل
-     20% = أعلى شوية
-     50% = قريب من المنتصف
   ========================================= */
-
 
   bottom:
 
@@ -535,11 +503,7 @@ const CLIENT = {
 
   /* =========================================
      10. إظهار الإطار
-
-     true  = يظهر
-     false = بدون إطار
   ========================================= */
-
 
   showBorder:
 
@@ -549,7 +513,6 @@ const CLIENT = {
 
   /* لون الإطار */
 
-
   borderColor:
 
   "#FFFFFF",
@@ -557,7 +520,6 @@ const CLIENT = {
 
 
   /* سمك الإطار */
-
 
   borderWidth:
 
@@ -567,13 +529,7 @@ const CLIENT = {
 
   /* =========================================
      11. خلفية الكلام
-
-     transparent = بدون خلفية
-
-     مثال:
-     rgba(0,0,0,0.30)
   ========================================= */
-
 
   buttonBackground:
 
@@ -583,12 +539,7 @@ const CLIENT = {
 
   /* =========================================
      12. شكل الحواف
-
-     50px = دائري
-     10px = حواف بسيطة
-     0px  = مربع
   ========================================= */
-
 
   borderRadius:
 
@@ -598,12 +549,7 @@ const CLIENT = {
 
   /* =========================================
      13. مستوى صوت الأغنية
-
-     1   = 100%
-     0.7 = 70%
-     0.5 = 50%
   ========================================= */
-
 
   musicVolume:
 
@@ -650,7 +596,6 @@ let started =
    CANVA
 ========================= */
 
-
 canva.src =
   CLIENT.canvaUrl;
 
@@ -659,7 +604,6 @@ canva.src =
 /* =========================
    VIDEO
 ========================= */
-
 
 video.src =
   CLIENT.introVideo;
@@ -681,7 +625,6 @@ video.load();
    MUSIC
 ========================= */
 
-
 music.src =
   CLIENT.music;
 
@@ -693,7 +636,6 @@ music.load();
 /* =========================
    OPEN BUTTON SETTINGS
 ========================= */
-
 
 button.textContent =
   CLIENT.openText;
@@ -732,7 +674,6 @@ button.style.borderRadius =
    BORDER
 ========================= */
 
-
 if (CLIENT.showBorder) {
 
 
@@ -762,7 +703,6 @@ else {
    FIRST CLICK
 ========================= */
 
-
 intro.addEventListener(
 
   "click",
@@ -781,23 +721,20 @@ intro.addEventListener(
 
     /* إخفاء زر فتح الدعوة */
 
-
     button.classList.add(
       "hidden"
     );
 
 
 
-    /* الفيديو يبدأ من البداية */
-
+    /* تشغيل الفيديو من البداية */
 
     video.currentTime =
       0;
 
 
 
-    /* الأغنية تبدأ من البداية */
-
+    /* تشغيل الأغنية من البداية */
 
     music.currentTime =
       0;
@@ -857,7 +794,6 @@ intro.addEventListener(
    WHEN VIDEO ENDS
 ========================= */
 
-
 video.addEventListener(
 
   "ended",
@@ -867,7 +803,6 @@ video.addEventListener(
 
     /* إخفاء الافتتاحية */
 
-
     intro.classList.add(
       "hide"
     );
@@ -875,7 +810,6 @@ video.addEventListener(
 
 
     /* إزالة الافتتاحية بعد الأنيميشن */
-
 
     setTimeout(
 
