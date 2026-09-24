@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+
+<!-- =====================================================
+     ⭐ معاينة الرابط — عدّل هذا الجزء لكل عميل ⭐
+===================================================== -->
+
+
+<!-- اسم الدعوة الذي سيظهر في معاينة الرابط -->
+
+<title>Shady & Aya Wedding Invitation</title>
+
+
+<meta
+  name="description"
+  content="You're invited to celebrate with us"
+>
+
+
+<!-- اسم الدعوة -->
+
+<meta
+  property="og:title"
+  content="Mostafa & Sara Wedding Invitation"
+>
+
+
+<!-- الوصف -->
+
+<meta
+  property="og:description"
+  content="You're invited to celebrate with us"
+>
+
+
+<!-- صورة معاينة الرابط -->
+
+<meta
+  property="og:image"
+  content="https://mostafa-sara.tdesignation.online/media/preview.jpg"
+>
+
+
+<meta
+  property="og:image:secure_url"
+  content="https://mostafa-sara.tdesignation.online/media/preview.jpg"
+>
+
+
+<meta
+  property="og:image:type"
+  content="image/jpeg"
+>
+
+
+<meta
+  property="og:image:width"
+  content="1200"
+>
+
+
+<meta
+  property="og:image:height"
+  content="630"
+>
+
+
+<meta
+  property="og:type"
+  content="website"
+>
+
+
+<!-- رابط دعوة العميل -->
+
+<meta
+  property="og:url"
+  content="https://mostafa-sara.tdesignation.online/"
+>
+
+
+<!-- Twitter / X -->
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+>
+
+
+<meta
+  name="twitter:title"
+  content="Mostafa & Sara Wedding Invitation"
+>
+
+
+<meta
+  name="twitter:description"
+  content="You're invited to celebrate with us"
+>
+
+
+<meta
+  name="twitter:image"
+  content="https://mostafa-sara.tdesignation.online/media/preview.jpg"
+>
+
+
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+
+/* =========================
+   CANVA
+========================= */
+
+#canva-container {
+
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100dvh;
+
+  background: #fff;
+
+  z-index: 1;
+
+}
+
+
+#canva-frame {
+
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+
+  display: block;
+
+}
+
+
+
+/* =========================
+   INTRO
+========================= */
+
+#intro {
+
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background: #000;
+
+  z-index: 9999;
+
+  cursor: pointer;
+
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+
+}
+
+
+
+#intro-video {
+
+  position: absolute;
+
+  inset: 0;
+
+
+  width: 100%;
+
+  height: 100%;
+
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #000;
+
+}
+
+
+
+/* =========================
+   OPEN TEXT
+========================= */
+
+#open-button {
+
+  position: absolute;
+
+
+  left: 50%;
+
+  bottom: 20%;
+
+
+  transform:
+    translateX(-50%);
+
+
+  z-index: 10;
+
+
+  padding:
+    12px 26px;
+
+
+  border-radius:
+    50px;
+
+
+  white-space:
+    nowrap;
+
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
+  font-weight:
+    400;
+
+
+  cursor:
+    pointer;
+
+
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
+
+}
+
+
+
+#open-button.hidden {
+
+  opacity: 0;
+
+
+  transform:
+    translateX(-50%)
+    translateY(10px);
+
+
+  pointer-events:
+    none;
+
+}
+
+
+
+/* =========================
+   HIDE INTRO
+========================= */
+
+#intro.hide {
+
+  opacity: 0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  #open-button {
+
+    padding:
+      10px 20px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================================
+     CANVA
+===================================================== -->
+
+<div id="canva-container">
+
+  <iframe
+
+    id="canva-frame"
+
+    title="Wedding Invitation"
+
+    allowfullscreen
+
+    allow="fullscreen">
+
+  </iframe>
+
+</div>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div id="intro">
+
+
+  <video
+
+    id="intro-video"
+
+    muted
+
+    playsinline
+
+    webkit-playsinline
+
+    preload="auto">
+
+  </video>
+
+
+
+  <div id="open-button"></div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+
+  id="music"
+
+  loop
+
+  preload="auto">
+
+</audio>
+
+
+
+
+<script>
+
+
+/* =========================================================
+
+        ⭐ بيانات العميل — عدّل هنا فقط ⭐
+
+   لا تعدّل أي شيء أسفل CLIENT
+
+========================================================= */
+
+
+const CLIENT = {
+
+
+  /* =========================================
+     1. رابط دعوة CANVA
+  ========================================= */
+
+
+  canvaUrl:
+
+  "https://www.canva.com/design/DAHV7WH2k6A/z9q1mYvSLrvWY2_hx_AcrQ/view?embed",
+
+
+
+  /* =========================================
+     2. فيديو الافتتاحية
+  ========================================= */
+
+
+  introVideo:
+
+  "media/intro.mp4",
+
+
+
+  /* =========================================
+     3. الأغنية
+  ========================================= */
+
+
+  music:
+
+  "media/music.mp3",
+
+
+
+  /* =========================================
+     4. الكلام الموجود على الافتتاحية
+  ========================================= */
+
+
+  openText:
+
+  "افتح الدعوة",
+
+
+
+  /* =========================================
+     5. لون الكلام
+
+     أبيض = #FFFFFF
+     أسود = #000000
+     ذهبي = #D4AF37
+  ========================================= */
+
+
+  textColor:
+
+  "#FFFFFF",
+
+
+
+  /* =========================================
+     6. حجم الكلام
+  ========================================= */
+
+
+  fontSize:
+
+  "15px",
+
+
+
+  /* =========================================
+     7. سمك الخط
+
+     400 = عادي
+     600 = متوسط
+     700 = عريض
+  ========================================= */
+
+
+  fontWeight:
+
+  "400",
+
+
+
+  /* =========================================
+     8. المسافة بين الحروف
+  ========================================= */
+
+
+  letterSpacing:
+
+  "2px",
+
+
+
+  /* =========================================
+     9. مكان الكلام من أسفل الشاشة
+
+     8%  = قريب من الأسفل
+     20% = أعلى شوية
+     50% = قريب من المنتصف
+  ========================================= */
+
+
+  bottom:
+
+  "20%",
+
+
+
+  /* =========================================
+     10. إظهار الإطار
+
+     true  = يظهر
+     false = بدون إطار
+  ========================================= */
+
+
+  showBorder:
+
+  true,
+
+
+
+  /* لون الإطار */
+
+
+  borderColor:
+
+  "#FFFFFF",
+
+
+
+  /* سمك الإطار */
+
+
+  borderWidth:
+
+  "1px",
+
+
+
+  /* =========================================
+     11. خلفية الكلام
+
+     transparent = بدون خلفية
+
+     مثال:
+     rgba(0,0,0,0.30)
+  ========================================= */
+
+
+  buttonBackground:
+
+  "rgba(0,0,0,0.30)",
+
+
+
+  /* =========================================
+     12. شكل الحواف
+
+     50px = دائري
+     10px = حواف بسيطة
+     0px  = مربع
+  ========================================= */
+
+
+  borderRadius:
+
+  "50px",
+
+
+
+  /* =========================================
+     13. مستوى صوت الأغنية
+
+     1   = 100%
+     0.7 = 70%
+     0.5 = 50%
+  ========================================= */
+
+
+  musicVolume:
+
+  0.7
+
+
+};
+
+
+
+/* =========================================================
+
+        ⛔ لا تعدّل أي شيء من هنا لأسفل ⛔
+
+========================================================= */
+
+
+const intro =
+  document.getElementById("intro");
+
+
+const video =
+  document.getElementById("intro-video");
+
+
+const music =
+  document.getElementById("music");
+
+
+const button =
+  document.getElementById("open-button");
+
+
+const canva =
+  document.getElementById("canva-frame");
+
+
+let started =
+  false;
+
+
+
+/* =========================
+   CANVA
+========================= */
+
+
+canva.src =
+  CLIENT.canvaUrl;
+
+
+
+/* =========================
+   VIDEO
+========================= */
+
+
+video.src =
+  CLIENT.introVideo;
+
+
+video.muted =
+  true;
+
+
+video.playsInline =
+  true;
+
+
+video.load();
+
+
+
+/* =========================
+   MUSIC
+========================= */
+
+
+music.src =
+  CLIENT.music;
+
+
+music.load();
+
+
+
+/* =========================
+   OPEN BUTTON SETTINGS
+========================= */
+
+
+button.textContent =
+  CLIENT.openText;
+
+
+button.style.color =
+  CLIENT.textColor;
+
+
+button.style.fontSize =
+  CLIENT.fontSize;
+
+
+button.style.fontWeight =
+  CLIENT.fontWeight;
+
+
+button.style.letterSpacing =
+  CLIENT.letterSpacing;
+
+
+button.style.bottom =
+  CLIENT.bottom;
+
+
+button.style.background =
+  CLIENT.buttonBackground;
+
+
+button.style.borderRadius =
+  CLIENT.borderRadius;
+
+
+
+/* =========================
+   BORDER
+========================= */
+
+
+if (CLIENT.showBorder) {
+
+
+  button.style.border =
+
+    CLIENT.borderWidth +
+
+    " solid " +
+
+    CLIENT.borderColor;
+
+
+}
+
+else {
+
+
+  button.style.border =
+    "none";
+
+
+}
+
+
+
+/* =========================
+   FIRST CLICK
+========================= */
+
+
+intro.addEventListener(
+
+  "click",
+
+  async function () {
+
+
+    if (started)
+      return;
+
+
+    started =
+      true;
+
+
+
+    /* إخفاء زر فتح الدعوة */
+
+
+    button.classList.add(
+      "hidden"
+    );
+
+
+
+    /* الفيديو يبدأ من البداية */
+
+
+    video.currentTime =
+      0;
+
+
+
+    /* الأغنية تبدأ من البداية */
+
+
+    music.currentTime =
+      0;
+
+
+    music.volume =
+      CLIENT.musicVolume;
+
+
+
+    try {
+
+
+      const videoPlay =
+        video.play();
+
+
+      const musicPlay =
+        music.play();
+
+
+
+      await Promise.all([
+
+        videoPlay,
+
+        musicPlay
+
+      ]);
+
+
+    }
+
+
+    catch (error) {
+
+
+      console.log(
+
+        "Playback error:",
+
+        error
+
+      );
+
+
+    }
+
+
+  }
+
+);
+
+
+
+/* =========================
+   WHEN VIDEO ENDS
+========================= */
+
+
+video.addEventListener(
+
+  "ended",
+
+  function () {
+
+
+    /* إخفاء الافتتاحية */
+
+
+    intro.classList.add(
+      "hide"
+    );
+
+
+
+    /* إزالة الافتتاحية بعد الأنيميشن */
+
+
+    setTimeout(
+
+      function () {
+
+
+        intro.style.display =
+          "none";
+
+
+      },
+
+      800
+
+    );
+
+
+  }
+
+);
+
+
+</script>
+
+
+</body>
+
+</html>
